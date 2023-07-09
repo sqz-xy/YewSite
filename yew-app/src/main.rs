@@ -20,6 +20,9 @@ fn curriculum_vitae() -> Html {
     html! {
         <div>
             <h1>{ "Curriculum Vitae" }</h1>
+                <center>
+                    <iframe src="https://onedrive.live.com/embed?resid=FE64C775FBA73B27%2137831&authkey=!APM_5iJyn-JTAYQ&em=2" width="800px" height="1200" frameborder="0"></iframe>
+                </center>
             <button {onclick}>{ "Go Home" }</button>
         </div>
     }
