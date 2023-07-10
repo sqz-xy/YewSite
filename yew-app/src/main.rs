@@ -29,15 +29,21 @@ fn curriculum_vitae() -> Html {
 }
 
 #[function_component(Home)]
-fn curriculum_vitae() -> Html {
+fn home() -> Html {
     let navigator = use_navigator().unwrap();
 
-    let onclick = Callback::from(move |_| navigator.push(&Route::CurriculumVitae));
+    //let onclick = Callback::from(move |_| navigator.push(&Route::CurriculumVitae));
     html! {
-        <div>
-            <h1>{ "Home" }</h1>
-            <button {onclick}>{ "Curriculum Vitae" }</button>
-        </div>
+        <>
+            <div>
+                <h1>{ "Home" }</h1>
+            </div>
+
+            <div class="Menu">
+                <Link<Route> to={Route::Home}>{ "Home" }</Link<Route>>
+                <Link<Route> to={Route::CurriculumVitae}>{ "Curriculum Vitae" }</Link<Route>>
+            </div>
+        </>
     }
 }
 
